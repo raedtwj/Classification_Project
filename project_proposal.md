@@ -2,35 +2,51 @@ Name: Raed Altuwaijri\
 Email / Github: AltuwaijriRaed@gmail.com
 
 
-# Project Proposal Template
+# Project Proposal
 
 ## Background:
 
 * Company info:\
-we are a Dates Fruit company called Tamrifier (Tamr + classifier) for Date fruit classification using image processing.
+we are an online shoping store our goal is to maximize the profits and minimize the costs. 
+<!-- we are a Dates Fruit company called Tamrifier (Tamr + classifier) for Date fruit classification using image processing. -->
 <!-- we are an advertising company caller AdSpam our goal is to make websites visitors live harder by maximizing there chance to click on an Ad (clickbait) -->
 * Problem or opportunity:\
-automate the proocess of classifing Date fruits to minimize costs and time.
+predict the items the customers will buy again, this will help us to know the quantity to provide for each product and where to store it to minimize the logistic costs, and to recommend the apropriate product for each customer to increase the sales.
 
 
 ## Data Description:
-images obtained from [Date fruit datasets](https://ieee-dataport.org/open-access/date-fruit-dataset-automated-harvesting-and-visual-yield-estimation) and will be processed to extract this data\
-**the project might be changed if we did not get the expected data from image processing**
-<!-- data could be extracted from images -->
+data obtained from [Instacart Market Basket Analysis](https://www.kaggle.com/c/instacart-market-basket-analysis/data)
+
+### order_products dataset:
+
+| Field Name        | Description                                                          |
+|-------------------|----------------------------------------------------------------------|
+| order_id          | unique identifier for each order                                     |
+| product_id        | unique identifier for each product                                   |
+| add_to_cart_order | the sequence in which they have been added to the cart in that order |
+
+### orders dataset
+
+| Field Name             | Description                                                    |
+|------------------------|----------------------------------------------------------------|
+| order_id               | unique identifier for each order                               |
+| user_id                | unique identifier for each user                                |
+| order_number           | user order number                                              |
+| order_dow              | order day of week                                              |
+| order_hour_of_day      | order hour of day                                              |
+| days_since_prior_order | days between this order and the prior                          |
+
+### products
 
 | Field Name        | Description                                                    |
 |-------------------|----------------------------------------------------------------|
-| Type              | Date fruit Type                                                |
-| Width             | Date fruit width                                               |
-| Height            | Date fruit Height                                              |
-| Color             | Date fruit Color (might be more than one)                      |
-| Color Percentage  | Date fruit Percentage for each color                           |
-| Area              | Date fruit Area                                                |
+| product_id        | unique identifier for each product                             |
+| product_name      | the name of product                                            |
+| aisle_id          | unique identifier for each aisle                               |
+| department_id     | unique identifier for each department                          |
 
-
-* the number of images is 8000 but its not cleand or processed yet
-* there is 152 clean images.
+the total number or rows is 262,203
 
 ## Tools:
 * Technologies: Python, Jupyter notebook
-* Libraries: Numpy, Pandas, plotly, Seaborn, Sklearn
+* Libraries: Numpy, Pandas, plotly, Seaborn, Sklearn, imblearn, xgboost, matplotlib, multiprocessing
